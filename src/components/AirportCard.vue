@@ -1,8 +1,8 @@
 <template>
   <div class="airport">
-    <p>{{ airport.abbreviation }}</p>
-    <p>{{ airport.name }}</p>
-    <p>{{ airport.city }}, {{ airport.state }}</p>
+     <p>{{ airport.Title }}</p>
+    <p>{{ airport.Description }}</p>
+    <p>{{ airport.Priority }}</p>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
 } 
 .airport p:first-child { 
     font-weight: bold; 
-    font-size: 2.5rem; 
+    font-size: 1.5rem; 
     margin: 1rem 0; 
 } 
 .airport p:last-child { 

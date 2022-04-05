@@ -2,10 +2,10 @@
     <div class="airport">
         <form action="">
             <p>{Create New To Do List}</p>
-        <label for="Title">Title <br/></label><input class='form' type="text" name="Title" id="Title"><br/>
-        <label for="Description">Description <br/></label><input class='form' type="text" name="Description" id="Description"><br/>
-        <label for="Priority">Priority <br/></label><input class='form' type="text" name="Priority" id="Priority"><br/>
-        <!-- <button> Create </button>     -->
+        <label for="title">title <br/></label><input class='form' type="text" name="title" id="title"><br/>
+        <label for="description">description <br/></label><input class='form' type="text" name="description" id="description"><br/>
+        <label for="priority">priority <br/></label><input class='form' type="text" name="priority" id="priority"><br/>
+        <button> Create </button>    
     </form>
     </div>
 </template>
@@ -15,6 +15,33 @@ export default {
         NewToDoList: { 
             type: Object, required: true 
         } 
+    },
+    computed:{
+        title : {
+            get(){
+                return this.$store.state.title
+            },
+            set(value){
+                this.$store.commit('setTitle', value)
+                console.log(value)
+            }
+        },
+        description : {
+             get(){
+                return this.$store.state.description
+            },
+            set(value){
+                this.$store.commit('setDescription', value)
+            }
+        },
+        priority : {
+             get(){
+                return this.$store.state.priority
+            },
+            set(value){
+                this.$store.commit('setPriority', value)
+            }
+        }
     } 
 } 
 </script>

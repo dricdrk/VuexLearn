@@ -1,39 +1,33 @@
 let todolist=[
   {
-    name: 'Cincinnati/Northern Kentucky International Airport',
-    abbreviation: 'CVG',
-    city: 'Hebron',
-    state: 'KY'
+    Title: 'Learn Vuex',
+    Description: 'CVG',
+    Priority: 'HIGH',
   },
   {
-    name: 'Seattle-Tacoma International Airport',
-    abbreviation: 'SEA',
-    city: 'Seattle',
-    state: 'WA',
+    Title: 'Create Getter',
+    Description: 'SEA',
+    Priority: 'HIGH',
   },
   {
-    name: 'Minneapolis-Saint Paul International Airport',
-    abbreviation: 'MSP',
-    city: 'Bloomington',
-    state: 'MN',
+    Title: 'Create Setter',
+    Description: 'MSP',
+    Priority: 'HIGH',
   },
   {
-    name: 'Louis Armstrong New Orleans International Airport',
-    abbreviation: 'MSY',
-    city: 'New Orleans',
-    state: 'LA',
+    Title: 'Create Mutation',
+    Description: 'MSY',
+    Priority: 'HIGH Orleans',
   },
   {
-    name: `Chicago O'hare International Airport`,
-    abbreviation: 'ORD',
-    city: 'Chicago',
-    state: 'IL',
+    Title: `create commit`,
+    Description: 'ORD',
+    Priority: 'HIGH',
   },
   {
-    name: `Miami International Airport`,
-    abbreviation: 'MIA',
-    city: 'Miami',
-    state: 'FL',
+    Title: `Send data`,
+    Description: 'MIA',
+    Priority: 'HIGH',
   }
 ]
 export default todolist

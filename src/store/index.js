@@ -4,11 +4,23 @@ export default createStore({
     state: {
         firstName: 'TO DO',
         lastName: 'LIST',
+        title: '',
+        description: '',
+        priority:'',
         favorites: []
       },
     mutations: {
         UPDATE_FAVORITES(state, payload) {
             state.favorites = payload
+          },
+          setTitle(state,value){
+              state.title=value
+          },
+          setDescription(state,value){
+              state.description=value
+          },
+          setPriority(state,value){
+              state.priority=value
           }
     },
     actions: {
