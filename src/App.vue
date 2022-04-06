@@ -1,34 +1,34 @@
 <template>
   <div>
     <new-to-do-list />
-    <button>create ></button>
+    <button @click="$store.getters.fullName">create ></button>
   </div>
   <div class="wrapper">
     <p>{{ $store.getters.fullName }}</p>
-    <div v-for="airport in airports" :key="airport.abbreviation">
-      <airport-card :airport="airport" @click="$store.dispatch('addToFavorites', airport)" />
+    <div v-for="airport in lists" :key="airport.abbreviation">
+      <todo-card :airport="airport" @click="$store.dispatch('addToFavorites', airport)" />
     </div>
     <h2 v-if="$store.state.favorites.length">TO DO <p>{If you want remove one element on this list click it}</p></h2>
     <div v-for="airport in $store.state.favorites" :key="airport.abbreviation">
-      <airport-card :airport="airport" @click="$store.dispatch('getToDoObject', airport)"/>
+      <todo-card :airport="airport" @click="$store.dispatch('deleteToFavorites', airport)"/>
     </div>
   </div>
 </template> 
 
 <script> 
 import { ref } from 'vue' 
-import allAirports from '@/data/airports.js' 
-import AirportCard from '@/components/AirportCard.vue' 
+import alllists from '@/data/todolists.js' 
+import todoCard from '@/components/todo.vue' 
 import NewToDoList from '@/components/NewToDoList.vue'
 export default { 
   components: { 
-    AirportCard,
+    todoCard,
     NewToDoList
   }, 
   setup() { 
-    const airports = ref(allAirports) 
+    const lists = ref(alllists) 
     return { 
-      airports 
+      lists 
     } 
   } 
 } 

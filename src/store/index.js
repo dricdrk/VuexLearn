@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import allTodolist from '../data/airports.js'
+import allTodolist from '../data/todolists'
 export default createStore({
     state: {
         firstName: 'TO DO',

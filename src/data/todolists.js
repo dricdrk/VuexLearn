@@ -2,32 +2,32 @@ let todolist=[
   {
     Title: 'Learn Vuex',
     Description: 'CVG',
-    Priority: 'HIGH',
+    Priority: 'HIGH ',
   },
   {
     Title: 'Create Getter',
     Description: 'SEA',
-    Priority: 'HIGH',
+    Priority: 'HIGH ',
   },
   {
     Title: 'Create Setter',
     Description: 'MSP',
-    Priority: 'HIGH',
+    Priority: 'HIGH ',
   },
   {
     Title: 'Create Mutation',
     Description: 'MSY',
-    Priority: 'HIGH Orleans',
+    Priority: 'HIGH  Orleans',
   },
   {
     Title: `create commit`,
     Description: 'ORD',
-    Priority: 'HIGH',
+    Priority: 'HIGH ',
   },
   {
     Title: `Send data`,
     Description: 'MIA',
-    Priority: 'HIGH',
+    Priority: 'HIGH ',
   }
 ]
 export default todolist
