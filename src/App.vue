@@ -10,7 +10,7 @@
     </div>
     <h2 v-if="$store.state.favorites.length">TO DO <p>{If you want remove one element on this list click it}</p></h2>
     <div v-for="airport in $store.state.favorites" :key="airport.abbreviation">
-      <airport-card :airport="airport" @click="$store.dispatch('deleteToFavorites', airport)"/>
+      <airport-card :airport="airport" @click="$store.dispatch('getToDoObject', airport)"/>
     </div>
   </div>
 </template> 

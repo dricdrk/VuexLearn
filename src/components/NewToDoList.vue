@@ -1,12 +1,12 @@
 <template>
     <div class="airport">
-        <form action="">
+        <div>
             <p>{Create New To Do List}</p>
         <label for="title">title <br/></label><input class='form' type="text" name="title" id="title"><br/>
         <label for="description">description <br/></label><input class='form' type="text" name="description" id="description"><br/>
         <label for="priority">priority <br/></label><input class='form' type="text" name="priority" id="priority"><br/>
-        <button> Create </button>    
-    </form>
+        <button  @click="$store.dispatch('addToDoObject', airport)"> Create </button>    
+    </div>
     </div>
 </template>
 <script>
@@ -14,33 +14,6 @@ export default {
     props: { 
         NewToDoList: { 
             type: Object, required: true 
-        } 
-    },
-    computed:{
-        title : {
-            get(){
-                return this.$store.state.title
-            },
-            set(value){
-                this.$store.commit('setTitle', value)
-                console.log(value)
-            }
-        },
-        description : {
-             get(){
-                return this.$store.state.description
-            },
-            set(value){
-                this.$store.commit('setDescription', value)
-            }
-        },
-        priority : {
-             get(){
-                return this.$store.state.priority
-            },
-            set(value){
-                this.$store.commit('setPriority', value)
-            }
         }
     } 
 } 

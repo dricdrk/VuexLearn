@@ -1,29 +1,36 @@
 import { createStore } from 'vuex'
-
+import allTodolist from '../data/airports.js'
 export default createStore({
     state: {
         firstName: 'TO DO',
         lastName: 'LIST',
-        title: '',
-        description: '',
-        priority:'',
-        favorites: []
+        favorites: [],
+        todoList:[]
       },
     mutations: {
         UPDATE_FAVORITES(state, payload) {
             state.favorites = payload
           },
-          setTitle(state,value){
-              state.title=value
+          UPDATE_TodoList(state, payload) {
+            state.todoList = payload
           },
-          setDescription(state,value){
-              state.description=value
-          },
-          setPriority(state,value){
-              state.priority=value
-          }
     },
     actions: {
+        addToDoObject(){
+            let title=document.getElementById('title').value;
+            let description=document.getElementById('description').value;
+            let priority=document.getElementById('priority').value;
+            var newToDo={
+                Title : title,
+                Description : description,
+                Priority : priority
+            }
+            allTodolist.push(newToDo)
+            console.log(allTodolist);
+            // const todoList = context.state.todoList
+            // todoList.push(payload)
+            // context.commit('UPDATE_TodoList', todoList)
+        },
         addToFavorites(context, payload) {
             const favorites = context.state.favorites
             favorites.push(payload)
